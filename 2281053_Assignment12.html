@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+</head>
+<body>
+    <h1>A very simple JS Calculator</h1>
+    <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operator = document.getElementById('operator').value;
+            var output;
+            if (operator === 'add') {
+                output = num1 + num2;
+            } else if (operator === 'subtract') {
+                output = num1 - num2;
+            } else if (operator === 'multiply') {
+                output = num1 * num2;
+            } else if (operator === 'divide') {
+                output = num1 / num2;
+            }
+            document.getElementById('output').innerText = output;
+        }
+        </script>
+</body>
+</html>
